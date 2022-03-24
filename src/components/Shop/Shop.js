@@ -35,7 +35,7 @@ const Shop = () => {
                   
                }
 
-            }
+            }     
 
             setCart(saveCart);
             // console.log(products);
