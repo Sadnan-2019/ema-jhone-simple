@@ -1,7 +1,7 @@
 # Getting Started with Create React App
 
 
-My project name:Ema shop 
+ # My project name:Ema shop 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
