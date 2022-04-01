@@ -18,11 +18,11 @@ const Cart = (props) => {
   //   console.log(typeof tax);
   const grandTotal = totalPrice + TotalShipping + tax;
   return (
-    <div className="cart">
+    <div className="cart" style={{color:"white"}}>
       <h4>Cart Details</h4>
       {/* <h1>  order component</h1> */}
-      <p>Selected Item:{quantity}</p>
-      <div>
+      <p >Selected Item:{quantity}</p>
+      <div >
         <p>Total Price : ${totalPrice}</p>
         <p>Total Shipping:${TotalShipping} </p>
         <p>Tax:${tax} </p>
