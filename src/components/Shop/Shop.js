@@ -1,20 +1,26 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Product from '../../Product/Product';
 import { addToDb, getStoredData } from '../../utilities/fakedb';
 import Cart from '../Cart/Cart';
+import useProducts from '../hooks/useProducts';
 import './Shop.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {  faStreetView } from '@fortawesome/free-solid-svg-icons'
+
+
 
 const Shop = () => {
 
-          const [products,setProducts]=useState([]);
+          const [products,setProducts]=useProducts();
           const [cart,setCart] = useState([]);
           
-          useEffect(()=>{
+         //  useEffect(()=>{
 
-                    fetch(`products.json`)
-                    .then(res => res.json())
-                    .then(data =>setProducts(data))
-          },[]);
+         //            fetch(`products.json`)
+         //            .then(res => res.json())
+         //            .then(data =>setProducts(data))
+         //  },[]);
 
           useEffect(()=>{
             //  console.log(products)
@@ -83,7 +89,14 @@ const Shop = () => {
                        <div className='cart-container'> 
                        {/* <h1>  order component</h1> */}
                        {/* <p>Selected Item{cart.length}</p> */}
-                       <Cart cart={cart}></Cart>
+                       <Cart cart={cart}>
+
+                          <Link to={"/orders"}>
+                          <button style={{marginTop:"20px"}}>Riview Order
+                          <FontAwesomeIcon icon={faStreetView}></FontAwesomeIcon>
+                          </button>
+                          </Link>
+                       </Cart>
                        </div>       
 
                              
