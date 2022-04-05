@@ -25,10 +25,10 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 -this is the ema jhone
 
 
-Markup : * Bullet list
-              * Nested bullet
-                  * Sub-nested bullet etc
-          * Bullet list item 2
+* Bullet list
+* Nested bullet
+* Sub-nested bullet etc
+* Bullet list item 2
 
 ### `npm run build`
 
