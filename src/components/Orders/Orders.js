@@ -40,9 +40,9 @@ const Orders = () => {
       </div>
       <div className="cart-container">
         <Cart cart={cart}>
-          <Link to={"/about"}>
-            <button style={{ marginTop: "10px", padding: "10px" }}>
-              Proceed Checkout
+          <Link to={"/shippment"}>
+            <button className="btn btn-primary" style={{ marginTop: "10px", padding: "10px" }}>
+              Proceed Shippment
             </button>
           </Link><br></br>
           <button onClick={inventory}>Inventory</button>
