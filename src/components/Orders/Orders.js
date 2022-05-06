@@ -15,16 +15,14 @@ const Orders = () => {
   const removeHandler = (items) => {
     // console.log(items)
 
-    const rest = cart.filter((item) => item.id !== items.id);
+    const rest = cart.filter((item) => item._id !== items._id);
     setCart(rest);
-    removeFromDb(items.id);
-
-    
+    removeFromDb(items._id);
   };
   const inventory = () => {
-          const path = `/inventory/`;
-          navigate(path)
-        };
+    const path = `/inventory/`;
+    navigate(path);
+  };
 
   return (
     <div className="shop-container">
@@ -33,7 +31,7 @@ const Orders = () => {
         {cart.map((product) => (
           <ReviewItem
             product={product}
-            key={product.id}
+            key={product._id}
             removeHandler={removeHandler}
           ></ReviewItem>
         ))}
@@ -41,10 +39,14 @@ const Orders = () => {
       <div className="cart-container">
         <Cart cart={cart}>
           <Link to={"/shippment"}>
-            <button className="btn btn-primary" style={{ marginTop: "10px", padding: "10px" }}>
+            <button
+              className="btn btn-primary"
+              style={{ marginTop: "10px", padding: "10px" }}
+            >
               Proceed Shippment
             </button>
-          </Link><br></br>
+          </Link>
+          <br></br>
           <button onClick={inventory}>Inventory</button>
         </Cart>
         {/* <h1>This is order page....:{cart.length}</h1>  */}

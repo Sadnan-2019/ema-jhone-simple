@@ -21,3 +21,31 @@
           margin-top: 10px;
 
 }
+
+.pagination{
+
+          margin-top: 10px;
+       
+          justify-content: center;
+          margin-bottom: 10px;
+          display: flex;
+        
+
+          
+}
+.pagination button{
+
+        
+          margin: 5px;
+          background-color: black;
+          color: white;
+          border: 1px solid blue;
+
+
+}
+
+.pagination .selected{
+
+          background-color: blue;
+          color: white;
+}
